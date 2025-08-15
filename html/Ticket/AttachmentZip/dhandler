@@ -1,6 +1,6 @@
 <%init>
 # grab ticket number from URL
-my ($mode,$ticket_no) = ($m->dhandler_arg =~ m/^((?:all|current))\/(\d+)\//i );
+my ($mode,$ticket_no) = ($m->dhandler_arg =~ m/^((?:all|latest versions))\/(\d+)\//i );
 
 # create ticket object
 my $Ticket = LoadTicket($ticket_no);
