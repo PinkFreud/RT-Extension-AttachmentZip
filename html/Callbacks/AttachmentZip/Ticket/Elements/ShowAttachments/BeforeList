@@ -6,12 +6,16 @@ Download attachments as zip |
 </font></td></tr></table>
 
 <%init>
-return if $$ShowMore == 0 && not defined $Count;
+return if (
+  ($$ShowMore == 0 && not defined $Count)
+  or $HideTitleBox == 1
+);
 </%init>
 
 <%ARGS>
 $Ticket => undef
 $Count => undef
 $ShowMore => \0
+$HideTitleBox => 0
 </%ARGS>
 
